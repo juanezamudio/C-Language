@@ -1,4 +1,4 @@
-/* 
+/*
  * strings.c, a demonstration program for the C language lab
  * in CS 105
  *
@@ -15,7 +15,7 @@
 int main() {
   int source[MAX_INTS];
   int j;
-  
+
   for (j = 0; j < MAX_INTS; j++)
     if (scanf("%d", source + j) == EOF) {
       printf("Too few values!\n");
@@ -23,6 +23,6 @@ int main() {
     }
 
   printf("%s\n%.16f\n", (char*)source, *(double*)(source+4));
- 
+
   return 0;
 }
