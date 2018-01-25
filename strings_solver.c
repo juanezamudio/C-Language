@@ -16,13 +16,12 @@
 #define MAX_INTS 6
 
 char first_line[14] = "Cecil Sagehen";
+char buffer[14];
+int int_array[4];
+
 double second_line;
-// char *pointer_first;
-//
-// char *pointer_first = &first_line[0];
-//
-// char *pointer_second = &first_line[1];
-char *pointer;
+char *char_pointer = NULL;
+double *doub_char_pointer = NULL;
 
 int main() {
   // *char_pointer = (char *)malloc(sizeof(first_line));
@@ -62,5 +61,21 @@ int main() {
   // printf("String %s\n",str );
   number = strtol(str,&eptr, 16);
   printf("%d\n", number);
+
+
+  // for (int i = 0; i < 14; i++) {
+  //   char *char_pointer = &first_line[i];
+  //
+  //   printf("%c\t%d\t%x\t", *char_pointer, *char_pointer, *char_pointer);
+  //   printf("\n");
+  // }
+  //
+  // for (int i = 14, j = 0; i > 0; i-=4, j++) {
+  //   char *char_pointer = &first_line[i];
+  //
+  //   int_array[j] = printf("%x", *char_pointer);
+  // }
+  //
+  // printf("\n");
   return 0;
 }
