@@ -17,15 +17,22 @@
 
 char first_line[14] = "Cecil Sagehen";
 double second_line;
-int *char_pointer = NULL;
-
-char_pointer = &first_line[0];
+// char *pointer_first;
+//
+// char *pointer_first = &first_line[0];
+//
+// char *pointer_second = &first_line[1];
+char *pointer;
 
 int main() {
   // *char_pointer = (char *)malloc(sizeof(first_line));
 
-  // for (int i = 0; i < ; i++)
-    printf("%d\n", *char_pointer);
-  
+  for (int i = 0; i < 14; i++) {
+    char *pointer = &first_line[i];
+
+    printf("%d\n", *pointer);
+    printf("%c", *pointer);
+  }
+  printf("\n");
   return 0;
 }
