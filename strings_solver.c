@@ -15,13 +15,17 @@
 
 #define MAX_INTS 6
 
-char first_line[7] = "Cecil Sagehen";
+char first_line[14] = "Cecil Sagehen";
 double second_line;
-char *pointer;
+int *char_pointer = NULL;
+
+char_pointer = &first_line[0];
 
 int main() {
-  for (int i = 0; i < ; i++)
-    printf("%x\n%.16f\n", (char*)source, *(double*)(source+4));
+  // *char_pointer = (char *)malloc(sizeof(first_line));
+
+  // for (int i = 0; i < ; i++)
+    printf("%d\n", *char_pointer);
   
   return 0;
 }
