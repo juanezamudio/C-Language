@@ -27,11 +27,40 @@ char *pointer;
 int main() {
   // *char_pointer = (char *)malloc(sizeof(first_line));
 
+  char str[4] = "";
+  char acc[4] = "";
+
+  long int number;
+  char *eptr;
+
+  int counter = 0;
+
   for (int i = 0; i < 14; i++) {
     char *pointer = &first_line[i];
+    // sprintf(acc, "%x", *pointer);
+    sprintf(acc, "%x", *pointer);
+    if (counter < 4 ) {
+      // printf("Counter %d\n", counter);
+      // strcat(str,acc);
+      strcat(acc,str);
+      strcpy(str,acc);
+      counter++;
+      // printf("Acc %s\n",acc );
+      // printf("Str %s\n",str );
+    } else {
+      printf("%s\n",str);
+      number = strtol(str,&eptr, 16);
+      printf("Digit %d\n", number);
 
+      counter = 1;
+      str[0] = '\0';
+      strcat(acc, str);
+      strcpy(str,acc);
+    }
     printf("%c\t%d\t%x\n", *pointer, *pointer, *pointer);
   }
-  printf("\n");
+  // printf("String %s\n",str );
+  number = strtol(str,&eptr, 16);
+  printf("%d\n", number);
   return 0;
 }
