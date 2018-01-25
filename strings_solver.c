@@ -30,7 +30,7 @@ int main() {
   for (int i = 0; i < 14; i++) {
     char *pointer = &first_line[i];
 
-    printf("%c\t%d\n", *pointer, *pointer);
+    printf("%c\t%d\t%x\n", *pointer, *pointer, *pointer);
   }
   printf("\n");
   return 0;
