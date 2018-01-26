@@ -20,7 +20,7 @@ strings: strings.c
 	$(CC) -o strings strings.c
 
 strings_solver: strings_solver.c
-	$(CC) -o strings_solver strings_solver.c
+	$(CC) -o strings_solver strings_solver.c -lm
 
 clean:
 	rm -rf arrays lists strings strings_solver
