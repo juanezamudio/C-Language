@@ -1,7 +1,8 @@
 /*
  * lists.c, a short linked list exercise for the C language lab in CS 105
  * 
- * <<Insert your names here!>>
+ * Juan Zamudio - jzamudio
+ * Rosario Huamani Carpio - rhuamanicarpio
  *
  */
 #include <stdio.h>
@@ -20,6 +21,16 @@ typedef struct cell {
  *    frees all the elements in a list and makes the list empty
  */
 void makeempty(cell_t** thelist) {
+  cell_t *current = *thelist;
+  cell_t *previous;
+
+  while (current != NULL) {
+    previous = current;
+    current = previous -> next;
+    free(previous);
+  }
+
+  *thelist = NULL;
 
 }
 
