@@ -17,7 +17,7 @@
 #define MAX_INTS 6
 
 char first_line[14] = "Cecil Sagehen";
-int second_line = M_PI;
+double second_line = M_PI;
 char *char_pointer = NULL;
 int *double_pointer = NULL;
 
@@ -55,13 +55,15 @@ int main() {
     printf("%c\t%d\t%x\n", *pointer, *pointer, *pointer);
   }
 
-  double_pointer = &second_line;
-  // double result = *(double *)double_pointer;
-
-  printf("%d\t%x\t%.16f\t%p\n", *double_pointer, *double_pointer, *double_pointer, *double_pointer);
   // printf("String %s\n",str );
   number = strtol(str,&eptr, 16);
   printf("%d\n", number);
+
+  double_pointer = &second_line;
+
+  int first_byte = double_pointer[0];
+  int second_byte = double_pointer[1];
+  printf("PI: %d\t%d\n", first_byte, second_byte);
 
   return 0;
 }

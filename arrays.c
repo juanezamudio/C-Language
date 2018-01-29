@@ -1,7 +1,7 @@
 /*
- * arrays.c, a short list exercise using arrays for the 
+ * arrays.c, a short list exercise using arrays for the
  * C language lab in CS 105
- * 
+ *
  * <<Insert your names here!>>
  *
  */
@@ -59,19 +59,28 @@ void print_array_of_arrays (array_of_arrays ary) {
  * aoa is a 7 x 4 array, just like the 4 x 7 array
  * except with the rows backwards.
  */
+
 int main () {
   two_dim_array tda;
   array_of_arrays aoa;
 
-  aoa[0] = 
-  aoa[1] = 
-  aoa[2] = 
-  aoa[3] = 
-  aoa[4] = 
-  aoa[5] = 
-  aoa[6] = 
-
   init_two_dim_array(tda);
+
+  int (*pa)[4] = NULL;
+  pa = &tda+1;
+
+  // int first_byte = pa;
+  aoa[0] = *pa;
+  pa = &tda+2;
+
+  aoa[1] = *pa;
+  aoa[2] = *pa;
+  aoa[3] = *pa;
+  aoa[4] = *pa;
+  aoa[5] = *pa;
+  aoa[6] = *pa;
+
+  // init_two_dim_array(tda);
   print_two_dim_array(tda);
   print_array_of_arrays(aoa);
 
