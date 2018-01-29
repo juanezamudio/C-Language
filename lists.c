@@ -31,7 +31,6 @@ void makeempty(cell_t** thelist) {
   }
 
   *thelist = NULL;
-
 }
 /* prepend
  *    creates a new element with the specified value
