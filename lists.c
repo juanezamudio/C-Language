@@ -1,6 +1,6 @@
 /*
  * lists.c, a short linked list exercise for the C language lab in CS 105
- * 
+ *
  * Juan Zamudio - jzamudio
  * Rosario Huamani Carpio - rhuamanicarpio
  *
@@ -33,13 +33,17 @@ void makeempty(cell_t** thelist) {
   *thelist = NULL;
 
 }
-
 /* prepend
  *    creates a new element with the specified value
  *    and adds it to the front of the list
  */
 void prepend(int newvalue, cell_t** thelist) {
+  cell_t *newelt  = (cell_t*) malloc(sizeof(cell_t));
 
+  newelt -> value = newvalue;
+  newelt -> next = *thelist;
+
+  *thelist = newelt;
 }
 
 /* append
@@ -63,12 +67,19 @@ void append(int newvalue, cell_t** thelist) {
   }
 }
 
-/* reverse
- *    rearranges the elements in a list so that they
- *    are in the opposite order
- */
+//  prev =
 void reverse(cell_t** thelist) {
+  cell_t *current = *thelist;
+  cell_t *prev = NULL;
+  cell_t *next;
 
+  while (current != NULL) {
+    next = current -> next;
+    current-> next = prev;
+    prev = current;
+    current = next;
+  }
+  *thelist = prev;
 }
 
 /* printlist
