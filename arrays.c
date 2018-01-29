@@ -65,8 +65,6 @@ int main () {
   two_dim_array tda;
   array_of_arrays aoa;
 
-  init_two_dim_array(tda);
-
   int (*pa)[4] = NULL;
 
   // int first_byte = pa;
@@ -86,7 +84,7 @@ int main () {
   pa = &tda[0];
   aoa[6] = *pa;
 
-  // init_two_dim_array(tda);
+  init_two_dim_array(tda);
   print_two_dim_array(tda);
   print_array_of_arrays(aoa);
 
