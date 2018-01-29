@@ -63,7 +63,7 @@ int main() {
 
   int first_byte = double_pointer[0];
   int second_byte = double_pointer[1];
-  printf("PI: %d\t%d\n", first_byte, second_byte);
+  printf("PI Digits: %d\t%d\n", first_byte, second_byte);
 
   return 0;
 }

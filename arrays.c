@@ -2,7 +2,8 @@
  * arrays.c, a short list exercise using arrays for the
  * C language lab in CS 105
  *
- * <<Insert your names here!>>
+ * Juan Zamudio - jzamudio
+ * Rosario Huamani Carpio - rhuamanicarpio
  *
  */
 #include <stdio.h>
@@ -67,17 +68,22 @@ int main () {
   init_two_dim_array(tda);
 
   int (*pa)[4] = NULL;
-  pa = &tda+1;
 
   // int first_byte = pa;
+  pa = &tda[3][3];
   aoa[0] = *pa;
-  pa = &tda+2;
 
+  pa = &tda[2][6];
   aoa[1] = *pa;
+  pa = &tda[2][2];
   aoa[2] = *pa;
+  pa = &tda[1][5];
   aoa[3] = *pa;
+  pa = &tda[1][1];
   aoa[4] = *pa;
+  pa = &tda[0][4];
   aoa[5] = *pa;
+  pa = &tda[0];
   aoa[6] = *pa;
 
   // init_two_dim_array(tda);
