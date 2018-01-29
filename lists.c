@@ -31,7 +31,6 @@ void makeempty(cell_t** thelist) {
   }
 
   *thelist = NULL;
-
 }
 
 /* prepend
@@ -39,7 +38,12 @@ void makeempty(cell_t** thelist) {
  *    and adds it to the front of the list
  */
 void prepend(int newvalue, cell_t** thelist) {
+  cell_t *newelt = (cell_t *)malloc(sizeof(cell_t));
 
+  newelt -> value = newvalue;
+  newelt -> next = *thelist;
+
+  *thelist = newelt;
 }
 
 /* append
@@ -63,12 +67,20 @@ void append(int newvalue, cell_t** thelist) {
   }
 }
 
+// 1 -> 2 -> 3
+
 /* reverse
  *    rearranges the elements in a list so that they
  *    are in the opposite order
  */
 void reverse(cell_t** thelist) {
+  cell_t *current = *thelist;
+  cell_t *next;
 
+  while (next != NULL) {
+    next = current -> next;
+    current = next;
+  }
 }
 
 /* printlist
